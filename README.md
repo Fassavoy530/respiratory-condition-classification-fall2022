@@ -9,5 +9,8 @@ Recently diagnoses based on AI techniques have come to the stage because the nat
 Our primary dataset is an open source dataset from kaggle called Respiratory Sound Database ([link](https://www.kaggle.com/datasets/vbookshelf/respiratory-sound-database)). <br>
 The paper for orginal data collection is call "Α Respiratory Sound Database for the Development of Automated Classification" [^1].
 
+## Data Pre-processing and Model development
+We used librosa package to trim wav files, extract MFCCs and Mel-spectrograms features from the wav files. Tranditional model such as Decision Tree and SVM were implemented using scikit-learn library. We also used PyTorch framework to experiment transfer learning using pretrained CNN models such as VGG16 and Alexnet. Both models were also trained from scratch due to a potential domain shift problem brought by our task and input. Details can be found in the source code notebook, arranged by different sections.
+
 
 [^1]: Rocha, B. M., Filos, D., Mendes, L., Vogiatzis, I., Perantoni, E., Kaimakamis, E., ... & Maglaveras, N. (2018). Α respiratory sound database for the development of automated classification. In Precision Medicine Powered by pHealth and Connected Health: ICBHI 2017, Thessaloniki, Greece, 18-21 November 2017 (pp. 33-37). Springer Singapore.
